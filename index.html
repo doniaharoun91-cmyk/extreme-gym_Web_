@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="EXTREME GYM — memberships, offers, training hours, mobile app and contact details in Haram, Giza.">
+<title>EXTREME GYM | Build Your Extreme Self</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#d5a52c;--gold2:#f5d77a;--black:#080808;--card:#121212;--muted:#aaa;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'Cairo',sans-serif;background:var(--black);color:#fff;overflow-x:hidden}
+button,input,select,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}
+.container{width:min(1160px,92%);margin:auto}.gold{color:var(--gold2)}.section{padding:82px 0}
+.section-title{text-align:center;margin-bottom:38px}.section-title small{color:var(--gold);letter-spacing:3px;font-weight:800}
+.section-title h2{font-size:clamp(27px,5vw,43px);font-weight:900;margin-top:6px}.section-title p{color:var(--muted);margin-top:8px}
+header{height:76px;background:#090909ed;border-bottom:1px solid #d5a52c40;position:sticky;top:0;z-index:50;backdrop-filter:blur(15px)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;direction:ltr}.brand img{width:52px;height:52px;object-fit:contain;border-radius:50%}.brand span{color:var(--gold2)}
+.navlinks{display:flex;gap:15px;align-items:center;font-size:12px;color:#ddd}.navlinks a:hover{color:var(--gold2)}
+.nav-actions{display:flex;gap:8px;align-items:center}.icon-btn{width:42px;height:42px;border:1px solid #ffffff30;background:#171717;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:20px;flex-shrink:0}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold2)}.menu-toggle{display:none}.lang-btn{width:auto;border-radius:24px;padding:0 12px;font-size:12px;font-weight:800}
+.hero{min-height:620px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#000d,#0009),url('gym1.jpg') center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080808 0%,transparent 38%,#0004);pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:90px 0;animation:rise .9s ease both}
+.eyebrow{display:inline-block;border:1px solid #d5a52c77;padding:7px 15px;border-radius:30px;color:var(--gold2);font-size:12px;letter-spacing:2px}
+.hero h1{font-size:clamp(43px,9vw,88px);line-height:1.15;font-weight:900;margin:22px 0}.hero h1 span{color:var(--gold2);text-shadow:0 0 35px #d5a52c30}
+.hero p{color:#ddd;max-width:570px;line-height:2;font-size:16px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:8px;border:1px solid var(--gold);font-weight:800;transition:.25s}
+.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111}.btn-outline{background:#111b;color:#fff}.btn:hover{transform:translateY(-3px);box-shadow:0 9px 28px #d5a52c24}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px;max-width:510px}.stat{border-right:2px solid var(--gold);padding:4px 14px}
+.stat strong{display:block;font-size:24px;color:var(--gold2)}.stat span{font-size:12px;color:#ccc}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-img{height:410px;border-radius:14px;overflow:hidden;border:1px solid #d5a52c55}
+.about-img img{width:100%;height:100%;object-fit:cover;transition:.6s}.about-img:hover img{transform:scale(1.06)}
+.about-copy h3{font-size:28px;margin-bottom:15px}.about-copy p{color:#bbb;line-height:2.1;margin-bottom:16px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.feature{padding:14px;background:#111;border:1px solid #ffffff10;border-radius:9px}
+.feature b{color:var(--gold2);display:block;margin-bottom:4px}.feature span{font-size:12px;color:#aaa}
+.pricing{background:linear-gradient(180deg,#0b0b0b,#111,#080808)}.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.price-card{background:linear-gradient(145deg,#191919,#0e0e0e);border:1px solid #ffffff16;border-radius:14px;padding:25px 17px;text-align:center;position:relative;overflow:hidden;transition:.3s}
+.price-card:hover{transform:translateY(-8px);border-color:var(--gold)}.price-card.popular{border-color:var(--gold);box-shadow:0 0 30px #d5a52c13}.price-card.best-value{border:2px solid var(--gold2);background:linear-gradient(155deg,#29200b 0%,#17130a 32%,#0d0d0d 100%);box-shadow:0 0 0 1px #d5a52c35,0 0 32px #d5a52c30;transform:translateY(-5px)}.price-card.best-value:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#8e6710,var(--gold2),#fff0a8,var(--gold2));}.price-card.best-value .price{font-size:38px;text-shadow:0 0 18px #d5a52c38}.price-card.best-value .btn{font-weight:900;box-shadow:0 5px 20px #d5a52c25}.price-card.best-value .tag{margin-top:3px;box-shadow:0 3px 15px #d5a52c25}
+.tag{display:inline-block;color:#111;background:var(--gold2);font-size:11px;font-weight:900;padding:4px 10px;border-radius:20px;margin-bottom:15px}
+.price-card h3{font-size:20px}.price{font-size:33px;font-weight:900;color:var(--gold2);margin:12px 0}.price small{font-size:13px;color:#aaa}
+.price-card p{color:#aaa;font-size:13px;min-height:40px;margin-bottom:18px}.price-card .btn{width:100%;padding:10px 8px;font-size:13px}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.hours-card{background:var(--card);padding:28px;border-radius:13px;border:1px solid #ffffff12}
+.hours-card h3{font-size:22px;margin:8px 0 15px}.hours-card .big-icon{font-size:30px}.hours-card p{color:#bbb;line-height:2}.hours-card strong{color:var(--gold2)}
+.note{font-size:12px;color:#999;margin-top:12px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery-item{height:230px;border-radius:10px;overflow:hidden;background:#151515;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.5s}.gallery-item:hover img{transform:scale(1.09)}
+.gallery-item:after{content:"EXTREME GYM";position:absolute;bottom:0;right:0;left:0;padding:22px 10px 10px;background:linear-gradient(transparent,#000b);font-size:11px;font-weight:800;color:var(--gold2)}
+.trainer-note{text-align:center;color:#aaa;font-size:13px;margin:-22px 0 28px}.trainer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.trainer{background:#121212;border:1px solid #ffffff10;border-radius:12px;overflow:hidden;text-align:center;transition:.3s}.trainer:hover{transform:translateY(-5px);border-color:#d5a52c77}
+.trainer img{width:100%;height:220px;object-fit:cover;display:block}.trainer h3{padding:13px 5px 2px;font-size:15px}.trainer p{color:var(--gold2);font-size:12px;padding-bottom:14px}
+.app-box{display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(115deg,#1c180c,#101010);border:1px solid #d5a52c55;border-radius:16px;padding:30px}
+.app-box h3{font-size:26px;margin:10px 0}.app-box p{color:#bbb;line-height:2}.app-icon{font-size:75px}.store-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.store-badge{border:1px solid #ffffff30;background:#080808;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:9px;font-size:12px}.store-badge b{display:block;font-size:14px;color:var(--gold2)}
+.apple-mark{width:25px;height:25px;flex:0 0 25px;color:#f5f5f5;display:block}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.payment-card{padding:25px;background:#121212;border:1px solid #d5a52c55;border-radius:13px}
+.payment-card h3{margin-bottom:10px}.payment-card p{color:#bbb;line-height:2;font-size:14px}
+.account-number{direction:ltr;text-align:center;font-size:clamp(19px,4vw,27px);letter-spacing:1px;color:var(--gold2);font-weight:900;padding:16px 5px;background:#080808;border:1px dashed #d5a52c66;border-radius:8px;margin:14px 0;overflow-wrap:anywhere}
+.pay-logos{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.pay-logo{padding:8px 12px;background:#080808;border:1px solid #ffffff24;border-radius:8px;font-weight:900;font-size:12px;direction:ltr}.pay-logo.instapay{color:#f2bd36}.pay-logo.visa{color:#8eb8ff}.pay-logo.cash{color:#ddd}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.contact-card{background:#111;padding:20px;border:1px solid #ffffff12;border-radius:12px;text-align:center;transition:.25s}
+.contact-card:hover{border-color:var(--gold)}.contact-card .c-icon{font-size:32px;font-weight:900;color:var(--gold2);margin-bottom:7px;line-height:1.2}.contact-card h3{font-size:16px;margin-bottom:5px}
+.contact-card p{color:#aaa;font-size:12px;overflow-wrap:anywhere}.complaints{margin-top:18px;padding:20px;background:#111;border:1px solid #d5a52c55;border-radius:12px;text-align:center}
+.complaints p{color:#bbb;line-height:2}.complaints strong{color:var(--gold2);direction:ltr;display:inline-block;font-size:21px}
+footer{padding:28px 0;border-top:1px solid #ffffff14;text-align:center;color:#888;font-size:12px}footer strong{color:var(--gold2)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
+.floaters{position:fixed;z-index:60;bottom:18px;left:15px;display:flex;flex-direction:column;gap:10px}
+.float-btn{width:51px;height:51px;border-radius:50%;display:grid;place-items:center;font-size:23px;box-shadow:0 4px 18px #0009;border:1px solid #ffffff22;color:#fff}
+.float-wa{background:#168c53}.float-call{background:#202020;border-color:var(--gold);color:var(--gold2)}.float-chat{background:var(--gold);color:#111;font-weight:900}
+.chat-window{position:fixed;z-index:100;bottom:82px;left:15px;width:min(340px,calc(100vw - 30px));background:#111;border:1px solid #d5a52c99;border-radius:14px;overflow:hidden;display:none;box-shadow:0 12px 40px #000b}
+.chat-window.open{display:block;animation:rise .25s ease}.chat-head{background:linear-gradient(120deg,#d5a52c,#f5d77a);color:#111;padding:14px;font-weight:900;display:flex;justify-content:space-between}
+.chat-head button{border:0;background:none;font-size:22px}.chat-body{padding:14px;max-height:340px;overflow:auto}.bot-message{background:#202020;padding:12px;border-radius:10px;color:#eee;font-size:13px;line-height:1.8;margin-bottom:12px}
+.chat-options{display:grid;gap:8px}.chat-options button{background:#191919;border:1px solid #d5a52c66;color:#f5d77a;padding:9px;border-radius:8px;text-align:start;font-size:12px}
+.chat-input{display:flex;padding:10px;gap:6px;border-top:1px solid #ffffff15}.chat-input input{min-width:0;flex:1;background:#080808;color:#fff;border:1px solid #333;padding:10px;border-radius:7px}
+.chat-input button{background:var(--gold);border:0;padding:0 12px;border-radius:7px;font-weight:900}
+.overlay{position:fixed;z-index:200;inset:0;background:#000c;display:none;align-items:center;justify-content:center;padding:14px;overflow-y:auto}.overlay.show{display:flex}
+.modal{width:min(540px,100%);max-height:94vh;overflow:auto;background:#111;border:1px solid #d5a52c88;border-radius:15px;padding:23px;position:relative}
+.modal h2{font-size:24px;margin-bottom:6px}.modal .sub{color:#aaa;font-size:13px;line-height:1.8;margin-bottom:17px}
+.close{position:absolute;left:13px;top:10px;border:0;background:#252525;color:white;border-radius:50%;width:34px;height:34px;font-size:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.field.full{grid-column:1/-1}.field label{font-size:13px;color:#ddd}.field input,.field select,.field textarea{width:100%;background:#080808;color:#fff;border:1px solid #393939;border-radius:8px;padding:11px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}.field textarea{resize:vertical;min-height:80px}
+.selected-package{padding:12px;border-radius:8px;background:#201b0e;border:1px solid #d5a52c66;color:var(--gold2);margin:13px 0;font-weight:800}
+.form-submit{width:100%;border:0;margin-top:4px}.small-help{font-size:11px;color:#888;line-height:1.8;margin-top:10px}
+[dir="rtl"] .navlinks{direction:rtl}[dir="rtl"] .stat{border-right:0;border-left:2px solid var(--gold)}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px){.navlinks{display:none;position:absolute;top:76px;right:0;left:0;background:#101010;padding:20px;flex-direction:column;border-bottom:1px solid #d5a52c55}.navlinks.open{display:flex}.menu-toggle{display:grid}.price-grid{grid-template-columns:repeat(2,1fr)}.trainer-grid{grid-template-columns:repeat(3,1fr)}.gallery-grid{grid-template-columns:repeat(3,1fr)}.trainer img{height:200px}}
+@media(max-width:600px){.section{padding:62px 0}.hero{min-height:570px;background-position:58% center}.hero p{font-size:14px}.stats{margin-top:30px}
+.about-grid,.hours-grid,.payment-grid{grid-template-columns:1fr}.about-img{height:300px;order:-1}.features{grid-template-columns:1fr 1fr}
+.gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}.gallery-item{height:175px}.trainer-grid{grid-template-columns:repeat(2,1fr)}.trainer img{height:205px}
+.contact-grid{grid-template-columns:1fr}.app-box{padding:22px;align-items:flex-start}.app-icon{font-size:50px}.app-box h3{font-size:21px}
+.price-card{padding:20px 12px}.price{font-size:27px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.brand{font-size:15px}.brand img{width:43px;height:43px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand"><img src="logo.jpg" alt="EXTREME GYM" onerror="this.style.display='none'"><div>EXTREME <span>GYM</span></div></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="#about" data-en="About" data-ar="عن الجيم">About</a>
+      <a href="#prices" data-en="Memberships" data-ar="الاشتراكات">Memberships</a>
+      <a href="#offers" data-en="Offers" data-ar="العروض">Offers</a>
+      <a href="#hours" data-en="Hours" data-ar="المواعيد">Hours</a>
+      <a href="#gallery" data-en="Gallery" data-ar="الجاليري">Gallery</a>
+      <a href="#trainers" data-en="Trainers" data-ar="المدربين">Trainers</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn lang-btn" id="langToggle" onclick="toggleLanguage()">عربي</button>
+      <button class="icon-btn menu-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero" id="home"><div class="container hero-content">
+  <span class="eyebrow" data-en="YOUR POWER. YOUR LIMIT." data-ar="قوتك. تحدّيك. إنجازك.">YOUR POWER. YOUR LIMIT.</span>
+  <h1 data-en="BUILD YOUR<br><span>EXTREME</span><br>SELF." data-ar="ابني<br><span>نسختك</span><br>الأقوى.">BUILD YOUR<br><span>EXTREME</span><br>SELF.</h1>
+  <p data-en="More than a gym — the beginning of a stronger you. Train with purpose, push your limits, and start your journey with EXTREME GYM." data-ar="مش مجرد جيم... دي بداية نسخة أقوى منك. تمرّن بإصرار، طوّر مستواك، وابدأ رحلتك مع EXTREME GYM.">More than a gym — the beginning of a stronger you. Train with purpose, push your limits, and start your journey with EXTREME GYM.</p>
+  <div class="actions"><a href="#prices" class="btn btn-primary" data-en="Choose Your Membership ↗" data-ar="اختار اشتراكك ↗">Choose Your Membership ↗</a><a href="#gallery" class="btn btn-outline" data-en="Explore the Gym" data-ar="اكتشف الجيم">Explore the Gym</a></div>
+  <div class="stats"><div class="stat"><strong>100%</strong><span data-en="Energy & Commitment" data-ar="طاقة وإصرار">Energy & Commitment</span></div><div class="stat"><strong>EXTREME</strong><span data-en="The Challenge Mindset" data-ar="روح التحدي">The Challenge Mindset</span></div><div class="stat"><strong>YOUR GOAL</strong><span data-en="Your Journey, Your Pace" data-ar="رحلتك على طريقتك">Your Journey, Your Pace</span></div></div>
+</div></section>
+<section class="section" id="about"><div class="container about-grid reveal">
+  <div class="about-copy"><div class="section-title" style="text-align:start;margin-bottom:20px"><small>ABOUT US</small><h2 data-en="More Than a <span class='gold'>Gym</span>" data-ar="أكتر من مجرد <span class='gold'>جيم</span>">More Than a <span class="gold">Gym</span></h2></div>
+    <h3 data-en="Your strength starts with a decision." data-ar="قوتك بتبدأ من قرارك.">Your strength starts with a decision.</h3>
+    <p data-en="At EXTREME GYM, we help you work toward your goals step by step. Start where you are, stay consistent, and let your progress speak for itself." data-ar="في EXTREME GYM بنساعدك تشتغل على نفسك خطوة بخطوة، وتخلي كل تمرينة أقرب لهدفك. ابدأ من مكانك، والتزم، وسيب النتيجة تتكلم.">At EXTREME GYM, we help you work toward your goals step by step.</p>
+    <div class="features"><div class="feature"><b data-en="✦ Focused Training" data-ar="✦ تدريب جاد">✦ Focused Training</b><span data-en="An environment built to help you focus." data-ar="بيئة تساعدك تركز على هدفك.">An environment built to help you focus.</span></div>
+    <div class="feature"><b data-en="✦ Coaching Team" data-ar="✦ فريق مدربين">✦ Coaching Team</b><span data-en="Support throughout your fitness journey." data-ar="فريق يساعدك في رحلة التمرين.">Support throughout your fitness journey.</span></div>
+    <div class="feature"><b data-en="✦ Flexible Memberships" data-ar="✦ خطط اشتراك">✦ Flexible Memberships</b><span data-en="Choose the duration that suits you." data-ar="اختار المدة المناسبة ليك.">Choose the duration that suits you.</span></div>
+    <div class="feature"><b data-en="✦ Separate Training Areas" data-ar="✦ أقسام منفصلة">✦ Separate Training Areas</b><span data-en="Men and women train separately." data-ar="الرجال والسيدات كلٌ في قسم منفصل.">Men and women train separately.</span></div></div>
+    <div class="actions"><a class="btn btn-primary" href="#contact" data-en="Visit Us" data-ar="زورنا دلوقتي">Visit Us</a></div>
+  </div><div class="about-img"><img src="gym2.jpg" alt="Inside EXTREME GYM" loading="lazy"></div>
+</div></section>
+<section class="section pricing" id="prices"><div class="container">
+  <div class="section-title reveal"><small>MEMBERSHIPS</small><h2 data-en="Choose Your <span class='gold'>Membership</span>" data-ar="اختار <span class='gold'>اشتراكك</span>">Choose Your <span class="gold">Membership</span></h2><p data-en="Choose your preferred plan and submit your details." data-ar="اختار الباقة المناسبة ليك واضغط «اشترك الآن» لإدخال بياناتك.">Choose your preferred plan and submit your details.</p></div>
+  <div class="price-grid">
+    <article class="price-card reveal"><h3 data-en="1 Month" data-ar="اشتراك شهر">1 Month</h3><div class="price">750 <small data-en="EGP" data-ar="جنيه">EGP</small></div><p data-en="Start your fitness journey month by month." data-ar="ابدأ رحلتك الرياضية شهر بشهر.">Start your fitness journey month by month.</p><button class="btn btn-outline" onclick="openSubscribe('1 Month',750)" data-en="Join Now ←" data-ar="اشترك الآن ←">Join Now ←</button></article>
+    <article class="price-card reveal"><h3 data-en="3 Months" data-ar="اشتراك 3 شهور">3 Months</h3><div class="price">2,000 <small data-en="EGP" data-ar="جنيه">EGP</small></div><p data-en="Build consistency and get closer to your goals." data-ar="استمرارية أكتر وخطوة أقرب لهدفك.">Build consistency and get closer to your goals.</p><button class="btn btn-outline" onclick="openSubscribe('3 Months',2000)" data-en="Join Now ←" data-ar="اشترك الآن ←">Join Now ←</button></article>
+    <article class="price-card reveal"><h3 data-en="6 Months" data-ar="اشتراك 6 شهور">6 Months</h3><div class="price">3,200 <small data-en="EGP" data-ar="جنيه">EGP</small></div><p data-en="A longer plan for stronger habits." data-ar="خطة أطول لبناء عادات ثابتة.">A longer plan for stronger habits.</p><button class="btn btn-outline" onclick="openSubscribe('6 Months',3200)" data-en="Join Now ←" data-ar="اشترك الآن ←">Join Now ←</button></article>
+    <article class="price-card best-value reveal"><span class="tag" data-en="⭐ BEST VALUE · BEST CHOICE" data-ar="⭐ أفضل قيمة · الاختيار الأفضل">⭐ BEST VALUE · BEST CHOICE</span><h3 data-en="12 Months" data-ar="اشتراك سنة">12 Months</h3><div class="price">4,500 <small data-en="EGP" data-ar="جنيه">EGP</small></div><p data-en="The best long-term value. Commit for a full year and keep building your strongest self." data-ar="أفضل قيمة على المدى الطويل. التزم لمدة سنة كاملة وابني أقوى نسخة من نفسك.">The best long-term value. Commit for a full year and keep building your strongest self.</p><button class="btn btn-primary" onclick="openSubscribe('12 Months',4500)" data-en="Choose Annual Plan ←" data-ar="اختار اشتراك السنة ←">Choose Annual Plan ←</button></article>
+  </div><p class="note" style="text-align:center" data-en="Prices are in Egyptian pounds. Confirm final terms with gym management before payment." data-ar="الأسعار بالجنيه المصري. يُرجى تأكيد الشروط والتفاصيل النهائية مع إدارة الجيم قبل الدفع.">Prices are in Egyptian pounds. Confirm final terms with gym management before payment.</p>
+</div></section>
+<section class="section" id="offers"><div class="container">
+  <div class="section-title reveal"><small>SPECIAL OFFERS</small><h2 data-en="Offers & <span class='gold'>Deals</span>" data-ar="العروض <span class='gold'>والخصومات</span>">Offers & <span class="gold">Deals</span></h2><p data-en="New offers will be announced here. Contact the team to learn which offers are currently available." data-ar="هنعرض العروض الجديدة هنا أول ما تتحدد. لمعرفة العروض المتاحة حاليًا، تواصل مع إدارة الجيم.">New offers will be announced here. Contact the team to learn which offers are currently available.</p></div>
+  <div class="price-card reveal" style="max-width:760px;margin:auto;padding:35px"><div style="font-size:42px">✦</div><h3 data-en="Stay Tuned for Upcoming Offers" data-ar="استنى عروضنا القادمة">Stay Tuned for Upcoming Offers</h3><p style="margin:12px auto 18px;max-width:540px" data-en="Offer details and availability may change. Message EXTREME GYM management directly for the latest information." data-ar="تفاصيل العروض وتوافرها ممكن يتغيروا. ابعت لإدارة EXTREME GYM مباشرة لمعرفة أحدث العروض.">Offer details and availability may change. Message EXTREME GYM management directly for the latest information.</p><button class="btn btn-primary" onclick="contactWhatsApp('Hello, I would like to ask about the current EXTREME GYM offers.')" data-en="Ask About Offers ↗" data-ar="استفسر عن العروض ↗">Ask About Offers ↗</button></div>
+</div></section>
+ 
+<section class="section" id="hours">
+  <div class="container">
+    <div class="section-title reveal">
+      <small>OPENING HOURS</small>
+      <h2 data-en="Training <span class='gold'>Hours</span>"
+          data-ar="مواعيد <span class='gold'>التمرين</span>">
+        Training <span class="gold">Hours</span>
+      </h2>
+      <p data-en="Please check the designated training hours for each section."
+         data-ar="يرجى الالتزام بمواعيد التمرين المحددة لكل قسم.">
+        Please check the designated training hours for each section.
+      </p>
+    </div>
+
+    <div class="hours-grid">
+
+      <div class="hours-card reveal">
+        <div class="big-icon">🏋️</div>
+        <h3 data-en="Men's Hours" data-ar="مواعيد الرجال">
+          Men's Hours
+        </h3>
+
+        <p data-en="Saturday to Thursday: 8:00 AM – 2:00 AM"
+   data-ar="من السبت للخميس: 8 صباحًا – 2 بعد منتصف الليل">
+  من السبت للخميس: 8 صباحًا – 2 بعد منتصف الليل
+</p>
+
+<p data-en="Friday: 10:00 AM – 1:00 AM"
+   data-ar="الجمعة: 10 صباحًا – 1 بعد منتصف الليل">
+  الجمعة: 10 صباحًا – 1 بعد منتصف الليل
+</p>
+
+        <p class="note"
+           data-en="Men's section only."
+           data-ar="المواعيد خاصة بقسم الرجال.">
+          Men's section only.
+        </p>
+      </div>
+
+      <div class="hours-card reveal">
+        <div class="big-icon">✨</div>
+        <h3 data-en="Women's Hours" data-ar="مواعيد السيدات">
+          Women's Hours
+        </h3>
+
+        <p data-en="Saturday–Thursday:"
+           data-ar="السبت إلى الخميس:">
+          Saturday–Thursday:
+          <strong>8 AM – 10 PM</strong>
+        </p>
+
+        <p data-en="Friday:"
+           data-ar="الجمعة:">
+          Friday:
+          <strong>Weekly Holiday</strong>
+        </p>
+
+        <div style="margin-top:18px;padding:13px;background:#201b0e;border:1px solid #d5a52c66;border-radius:9px;">
+          <p style="color:var(--gold2);font-weight:800;font-size:13px;line-height:1.9"
+             data-en="📢 Effective Sunday, November 1, 2026"
+             data-ar="📢 يبدأ تطبيق هذه المواعيد اعتبارًا من يوم الأحد الموافق 1 نوفمبر 2026">
+            📢 Effective Sunday, November 1, 2026
+          </p>
+
+          <p style="font-size:12px;color:#ccc;line-height:1.9;margin-top:5px"
+             data-en="The updated schedule applies to the women's section only. Friday will be the weekly holiday."
+             data-ar="تُطبق المواعيد المذكورة على قسم السيدات فقط، وتكون أيام الجمعة إجازة أسبوعية.">
+            The updated schedule applies to the women's section only. Friday will be the weekly holiday.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery"><div class="container"><div class="section-title reveal"><small>THE GYM</small><h2 data-en="Explore the <span class='gold'>Gym</span>" data-ar="جولة داخل <span class='gold'>الجيم</span>">Explore the <span class="gold">Gym</span></h2><p data-en="Take a look at the EXTREME GYM atmosphere and equipment." data-ar="شوف أجواء ومعدات EXTREME GYM.">Take a look at the EXTREME GYM atmosphere and equipment.</p></div>
+<div class="gallery-grid">
+<div class="gallery-item reveal"><img src="gym1.jpg" alt="Gym photo 1" loading="lazy"></div><div class="gallery-item reveal"><img src="gym2.jpg" alt="Gym photo 2" loading="lazy"></div><div class="gallery-item reveal"><img src="gym3.jpg" alt="Gym photo 3" loading="lazy"></div><div class="gallery-item reveal"><img src="gym4.jpg" alt="Gym photo 4" loading="lazy"></div>
+<div class="gallery-item reveal"><img src="gym5.jpg" alt="Gym photo 5" loading="lazy"></div><div class="gallery-item reveal"><img src="gym6.jpg" alt="Gym photo 6" loading="lazy"></div><div class="gallery-item reveal"><img src="gym7.jpg" alt="Gym photo 7" loading="lazy"></div><div class="gallery-item reveal"><img src="gym8.jpg" alt="Gym photo 8" loading="lazy"></div>
+<div class="gallery-item reveal"><img src="gym9.jpg" alt="Gym photo 9" loading="lazy"></div><div class="gallery-item reveal"><img src="gym10.jpg" alt="Gym photo 10" loading="lazy"></div><div class="gallery-item reveal"><img src="gym11.jpg" alt="Gym photo 11" loading="lazy"></div><div class="gallery-item reveal"><img src="gym12.jpg" alt="Gym photo 12" loading="lazy"></div>
+<div class="gallery-item reveal"><img src="gym13.jpg" alt="Gym photo 13" loading="lazy"></div><div class="gallery-item reveal"><img src="gym14.jpg" alt="Gym photo 14" loading="lazy"></div><div class="gallery-item reveal"><img src="gym15.jpg" alt="Gym photo 15" loading="lazy"></div><div class="gallery-item reveal"><img src="gym16.jpg" alt="Gym photo 16" loading="lazy"></div>
+</div></div></section>
+<section class="section" id="trainers"><div class="container"><div class="section-title reveal"><small>OUR TEAM</small><h2 data-en="Meet Our <span class='gold'>Trainers</span>" data-ar="فريق <span class='gold'>المدربين</span>">Meet Our <span class="gold">Trainers</span></h2><p data-en="Our coaching team is here to support your progress." data-ar="فريق EXTREME GYM موجود لمساعدتك في رحلتك.">Our coaching team is here to support your progress.</p></div>
+<p class="trainer-note" data-en="Please note: The trainers displayed here belong to the MEN'S BRANCH only." data-ar="ملحوظة مهمة: المدربون المعروضون هنا خاصون بفرع الرجال فقط.">Please note: The trainers displayed here belong to the MEN'S BRANCH only.</p>
+<div class="trainer-grid"><article class="trainer reveal"><img src="ahmed.jpg" alt="Ahmed Mahmoud" loading="lazy"><h3 data-en="Ahmed Mahmoud" data-ar="أحمد محمود">Ahmed Mahmoud</h3><p>TRAINER · MEN'S BRANCH</p></article>
+<article class="trainer reveal"><img src="amr.jpg" alt="Amr Diaa" loading="lazy"><h3 data-en="Amr Diaa" data-ar="عمرو ضياء">Amr Diaa</h3><p>TRAINER · MEN'S BRANCH</p></article>
+<article class="trainer reveal"><img src="badr.jpg" alt="Badr Gamal" loading="lazy"><h3 data-en="Badr Gamal" data-ar="بدر جمال">Badr Gamal</h3><p>TRAINER · MEN'S BRANCH</p></article>
+<article class="trainer reveal"><img src="mokhtar.jpg" alt="Mokhtar" loading="lazy"><h3 data-en="Mokhtar" data-ar="مختار">Mokhtar</h3><p>TRAINER · MEN'S BRANCH</p></article>
+<article class="trainer reveal"><img src="bibo.jpg" alt="Bibo" loading="lazy"><h3 data-en="Bibo" data-ar="بيبو">Bibo</h3><p>TRAINER · MEN'S BRANCH</p></article></div></div></section>
+<section class="section" id="app"><div class="container"><div class="app-box reveal"><div><small class="gold">EXTREME MOBILE APP</small><h3 data-en="Your Gym, Always Within Reach" data-ar="جيمك معاك في كل وقت">Your Gym, Always Within Reach</h3>
+<p data-en="The EXTREME mobile app is an important part of your membership experience. Use it to stay connected with your gym and follow the details and services available through the app. Download it on Android or iOS where available, and check the official store listing for supported devices and features." data-ar="تطبيق EXTREME مهم جدًا لتجربتك كعضو في الجيم. من خلاله تقدر تفضل متابع تفاصيل وخدمات الجيم المتاحة على التطبيق وتكون أقرب لرحلتك الرياضية. نزّله على Android أو iOS حسب الإتاحة، وراجع المتجر الرسمي لمعرفة الأجهزة والمميزات المدعومة.">The EXTREME mobile app is an important part of your membership experience.</p>
+<div class="store-badges"><a class="store-badge" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.extreme.z10.members"><span style="font-size:25px">▶</span><span>GET IT ON<b>Google Play</b></span></a><a class="store-badge" target="_blank" rel="noopener" href="https://www.apple.com/app-store/" aria-label="Apple App Store for iOS"><svg class="apple-mark" viewBox="0 0 24 24" role="img" aria-label="Apple logo" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.88 15.5 3.52 7.18 8.8 6.88c1.3.07 2.2.72 3 .78 1.2-.24 2.35-.9 3.64-.82 1.55.12 2.72.74 3.5 1.84-3.2 1.92-2.44 6.14.5 7.32-.59 1.55-1.35 3.09-2.39 4.29zM12.03 6.81c-.15-2.3 1.72-4.2 3.87-4.38.3 2.62-2.38 4.6-3.87 4.38z"/></svg><span>iOS · Apple<b>App Store</b></span></a></div>
+<p class="note" data-en="Android app listing is linked above. The App Store link opens Apple's store; confirm that the official EXTREME app is available for iOS in your region before downloading." data-ar="رابط تطبيق أندرويد موجود بالأعلى. رابط App Store يفتح متجر Apple؛ تأكد من توفر التطبيق الرسمي على iOS في منطقتك قبل التنزيل.">Android app listing is linked above. The App Store link opens Apple's store; confirm that the official EXTREME app is available for iOS in your region before downloading.</p>
+</div><div class="app-icon">📱</div></div></div></section>
+<section class="section" id="payment"><div class="container"><div class="section-title reveal"><small>PAYMENT OPTIONS</small><h2 data-en="Payment <span class='gold'>Methods</span>" data-ar="طرق <span class='gold'>الدفع</span>">Payment <span class="gold">Methods</span></h2><p data-en="Confirm payment details with gym management before transferring money." data-ar="أكد تفاصيل الدفع مع إدارة الجيم قبل تحويل أي مبلغ.">Confirm payment details with gym management before transferring money.</p></div>
+<div class="payment-grid"><div class="payment-card reveal"><h3>InstaPay · Banque Misr</h3><div class="pay-logos"><span class="pay-logo instapay">InstaPay</span><span class="pay-logo">BANQUE MISR</span></div><p data-en="Transfer reference/account number provided for this website:" data-ar="رقم الحساب/التحويل المرسل لاستخدامه في الموقع:">Transfer reference/account number provided for this website:</p>
+<div class="account-number" id="instapayNumber">1230001000004856</div><div class="actions"><button class="btn btn-primary" onclick="copyInstapay()" data-en="Copy Number" data-ar="نسخ الرقم">Copy Number</button><button class="btn btn-outline" onclick="sendTransferScreenshot()" data-en="Send Transfer Screenshot" data-ar="إرسال صورة التحويل">Send Transfer Screenshot</button></div>
+<p class="small-help" data-en="Use this confirmed InstaPay number for your transfer. After transferring, send your transfer screenshot to EXTREME GYM on WhatsApp." data-ar="استخدم رقم إنستاباي المؤكد من الإدارة للتحويل. بعد التحويل، ابعت صورة الإيصال لإدارة EXTREME GYM على واتساب.">Use this confirmed InstaPay number for your transfer. After transferring, send your transfer screenshot to EXTREME GYM on WhatsApp.</p></div>
+<div class="payment-card reveal"><h3 data-en="Cards & Installments" data-ar="الكروت والتقسيط">Cards & Installments</h3><div class="pay-logos"><span class="pay-logo visa">VISA</span><span class="pay-logo">InstaPay</span><span class="pay-logo cash">CASH</span><span class="pay-logo">VALU</span><span class="pay-logo">Forsa</span><span class="pay-logo">Souhoola</span></div>
+<p data-en="Cash and card payments may be available at the gym. Installment options such as Valu, Forsa or Souhoola depend on current availability, eligibility and provider terms." data-ar="قد يتوفر الدفع نقدًا أو بالكروت داخل الجيم. خيارات التقسيط مثل Valu وForsa وSouhoola تعتمد على الإتاحة الحالية وشروط وموافقة جهة التقسيط.">Cash and card payments may be available at the gym.</p><p style="margin-top:10px" data-en="Ask management to confirm accepted methods, fees and installment terms before paying." data-ar="اسأل الإدارة لتأكيد وسائل الدفع المقبولة والرسوم وشروط التقسيط قبل الدفع.">Ask management to confirm accepted methods, fees and installment terms before paying.</p><button class="btn btn-outline" style="margin-top:15px" onclick="contactWhatsApp('Hello, please confirm the currently accepted payment methods and installment options.')" data-en="Confirm with Management ↗" data-ar="أكد مع الإدارة ↗">Confirm with Management ↗</button></div></div></div></section>
+<section class="section" id="contact"><div class="container"><div class="section-title reveal"><small>GET IN TOUCH</small><h2 data-en="Ready to Go <span class='gold'>Extreme?</span>" data-ar="مستني <span class='gold'>إيه؟</span>">Ready to Go <span class="gold">Extreme?</span></h2><p data-en="Contact our team for membership details, offers and visits." data-ar="تواصل معنا واعرف تفاصيل الاشتراك والعروض والزيارة.">Contact our team for membership details, offers and visits.</p></div>
+<div class="contact-grid"><a class="contact-card reveal" target="_blank" rel="noopener" href="https://wa.me/201023286633"><div class="c-icon" aria-hidden="true">☏</div><h3>WhatsApp</h3><p dir="ltr">+20 102 328 6633</p></a>
+<a class="contact-card reveal" target="_blank" rel="noopener" href="https://www.tiktok.com/@extreme_gym2014?_r=1&amp;_t=ZS-9AcxpZxsIad"><div class="c-icon" aria-hidden="true">♪</div><h3>TikTok</h3><p>@extreme_gym2014</p></a>
+<a class="contact-card reveal" target="_blank" rel="noopener" href="https://www.instagram.com/extreme_gym_official/"><div class="c-icon" aria-hidden="true">◎</div><h3>Instagram</h3><p>@extreme_gym_official</p></a>
+<a class="contact-card reveal" target="_blank" rel="noopener" href="https://www.facebook.com/share/1CmCKz2skW/"><div class="c-icon" aria-hidden="true">f</div><h3>Facebook</h3><p data-en="Follow our gym page" data-ar="تابع صفحة الجيم">Follow our gym page</p></a></div>
+<div style="text-align:center;margin-top:28px" class="reveal"><p style="color:#aaa;line-height:2" data-en="📍 101 Nasr Eldin Street, beside Nasr Eldin Mosque, First Haram, Giza" data-ar="📍 101 شارع نصر الدين، بجوار مسجد نصر الدين، أول الهرم، الجيزة">📍 101 Nasr Eldin Street, beside Nasr Eldin Mosque, First Haram, Giza</p><a class="btn btn-primary" style="margin-top:14px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=101+شارع+نصر+الدين+بجوار+مسجد+نصر+الدين+اول+الهرم+الجيزة" data-en="Open Google Maps ↗" data-ar="افتح الموقع على الخريطة ↗">Open Google Maps ↗</a></div>
+<div class="complaints reveal"><h3 data-en="Complaints & Suggestions" data-ar="الشكاوى والمقترحات">Complaints & Suggestions</h3><p data-en="Your feedback matters. Contact us directly for complaints, suggestions or service feedback." data-ar="رأيك مهم بالنسبة لنا. تواصل معنا مباشرة للشكاوى أو المقترحات أو ملاحظات الخدمة.">Your feedback matters. Contact us directly for complaints, suggestions or service feedback.</p><p><strong>01000181358</strong></p><a class="btn btn-outline" style="margin-top:10px" href="tel:01000181358" data-en="Call Complaints Line" data-ar="اتصل بخط الشكاوى">Call Complaints Line</a></div>
+</div></section>
+</main>
+<footer><div class="container"><strong>EXTREME GYM</strong><p style="margin-top:7px" data-en="Your strength starts with a decision. Stay Extreme." data-ar="قوتك تبدأ بقرارك. خليك Extreme.">Your strength starts with a decision. Stay Extreme.</p><p style="margin-top:8px">© <span id="year"></span> EXTREME GYM. All rights reserved.</p></div></footer>
+<div class="floaters"><a class="float-btn float-call" href="tel:01050051878" aria-label="Call EXTREME GYM" title="Call">☎</a><a class="float-btn float-wa" href="https://wa.me/201023286633" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">☏</a><button class="float-btn float-chat" onclick="toggleChat()" aria-label="Open Bot Extreme" title="Bot Extreme">✦</button></div>
+<div class="chat-window" id="chatWindow"><div class="chat-head"><span>✦ Bot Extreme</span><button onclick="toggleChat()" aria-label="Close">×</button></div><div class="chat-body" id="chatBody"><div class="bot-message" data-en="Welcome to EXTREME GYM! 💪 I'm Bot Extreme. I can help with memberships, opening hours, offers, payments and contact details." data-ar="أهلًا بيك في EXTREME GYM! 💪 أنا بوت اكستريم. أقدر أساعدك في الأسعار والمواعيد والعروض وطرق التواصل.">Welcome to EXTREME GYM! 💪 I'm Bot Extreme.</div><div class="chat-options"><button onclick="botReply(currentLang==='en'?'Memberships: 1 month EGP 750, 3 months EGP 2,000, 6 months EGP 3,200, 12 months EGP 4,500.':'الأسعار: شهر 750 جنيه، 3 شهور 2000 جنيه، 6 شهور 3200 جنيه، سنة 4500 جنيه.')">💰 <span data-en="Membership Prices" data-ar="أسعار الاشتراكات">Membership Prices</span></button><button onclick="botReply(currentLang==='en'?'Men: Saturday–Thursday 8 AM–2 AM; Friday 10 AM–1 AM. Women: Saturday–Thursday 8 AM–10 PM; Friday closed. Men and women train separately.':'الرجال: السبت إلى الخميس 8 صباحًا–2 صباحًا، والجمعة 10 صباحًا–1 صباحًا. السيدات: السبت إلى الخميس 8 صباحًا–10 مساءً، والجمعة إجازة. الرجال والسيدات كلٌ في قسم منفصل.')">🕒 <span data-en="Training Hours" data-ar="مواعيد التمرين">Training Hours</span></button><button onclick="contactWhatsApp(currentLang==='en'?'Hello, I would like to ask about current offers.':'أريد الاستفسار عن العروض المتاحة حاليًا.')">✦ <span data-en="Current Offers" data-ar="العروض المتاحة">Current Offers</span></button><button onclick="contactWhatsApp(currentLang==='en'?'Hello, I have a question for EXTREME GYM management.':'أريد الاستفسار من إدارة الجيم.')">💬 <span data-en="Contact Management" data-ar="تحدث مع الإدارة">Contact Management</span></button></div></div><form class="chat-input" onsubmit="sendChatMessage(event)"><input id="chatInput" placeholder="Ask Bot Extreme..." autocomplete="off"><button type="submit" data-en="Send" data-ar="إرسال">Send</button></form></div>
+<div class="overlay" id="subscribeOverlay" onclick="overlayClose(event,'subscribeOverlay')"><div class="modal"><button class="close" onclick="closeModal('subscribeOverlay')" aria-label="Close">×</button><h2 data-en="New <span class='gold'>Membership Request</span>" data-ar="طلب <span class='gold'>اشتراك جديد</span>">New <span class="gold">Membership Request</span></h2><p class="sub" data-en="Fill in your details. WhatsApp will open with a ready message for management." data-ar="اكتب بياناتك، وهتفتح رسالة واتساب جاهزة للإدارة.">Fill in your details.</p><div class="selected-package" id="selectedPackage">Selected plan</div>
+<form id="subscribeForm" onsubmit="submitSubscription(event)"><div class="form-grid"><div class="field"><label for="clientName" data-en="Full name *" data-ar="الاسم بالكامل *">Full name *</label><input id="clientName" required maxlength="100" placeholder="Your name"></div><div class="field"><label for="clientPhone" data-en="Mobile number *" data-ar="رقم الموبايل *">Mobile number *</label><input id="clientPhone" required type="tel" inputmode="tel" maxlength="20" placeholder="01xxxxxxxxx"></div>
+<div class="field"><label for="clientGender" data-en="Section *" data-ar="القسم *">Section *</label><select id="clientGender" required><option value="" data-en="Choose" data-ar="اختار">Choose</option><option value="Men" data-en="Men" data-ar="رجال">Men</option><option value="Women" data-en="Women" data-ar="سيدات">Women</option></select></div>
+<div class="field"><label for="clientPayment" data-en="Payment method *" data-ar="طريقة الدفع *">Payment method *</label><select id="clientPayment" required><option value="" data-en="Choose a method" data-ar="اختار طريقة الدفع">Choose a method</option><option>InstaPay - Banque Misr</option><option>Pay at the gym</option><option>Card payment - confirm availability</option><option>Forsa - confirm availability</option><option>Souhoola - confirm availability</option><option>Valu - confirm availability</option></select></div>
+<div class="field full"><label for="clientNotes" data-en="Notes (optional)" data-ar="ملاحظات (اختياري)">Notes (optional)</label><textarea id="clientNotes" maxlength="500" placeholder="Additional details..."></textarea></div></div><button class="btn btn-primary form-submit" type="submit" data-en="Send Membership Request on WhatsApp ↗" data-ar="إرسال طلب الاشتراك على واتساب ↗">Send Membership Request on WhatsApp ↗</button><p class="small-help" data-en="Submitting a request does not confirm membership or payment. Management will confirm the details with you." data-ar="إرسال الطلب لا يعني تأكيد الاشتراك أو الدفع. الإدارة هتراجع التفاصيل معاك على واتساب.">Submitting a request does not confirm membership or payment.</p></form></div></div>
+<script>
+const WHATSAPP_NUMBER="201023286633";
+const INSTAPAY_NUMBER="1230001000004856";
+let selectedPlan={name:"",price:0};
+let currentLang="en";
+document.getElementById("year").textContent=new Date().getFullYear();
+
+function toggleLanguage(){
+ currentLang=currentLang==="en"?"ar":"en";
+ document.documentElement.lang=currentLang;
+ document.documentElement.dir=currentLang==="ar"?"rtl":"ltr";
+ document.getElementById("langToggle").textContent=currentLang==="en"?"عربي":"English";
+ document.querySelectorAll("[data-en][data-ar]").forEach(el=>{
+   const value=el.getAttribute("data-"+currentLang);
+   if(value!==null){
+     if(el.tagName==="INPUT"||el.tagName==="TEXTAREA")el.placeholder=value;
+     else el.innerHTML=value;
+   }
+ });
+ document.getElementById("chatInput").placeholder=currentLang==="en"?"Ask Bot Extreme...":"اكتب سؤالك لبوت اكستريم...";
+}
+function openSubscribe(name,price){
+ selectedPlan={name,price};
+ document.getElementById("selectedPackage").textContent=name+" — "+Number(price).toLocaleString("en-US")+" EGP";
+ document.getElementById("subscribeOverlay").classList.add("show");document.body.style.overflow="hidden";
+}
+function closeModal(id){document.getElementById(id).classList.remove("show");if(!document.querySelector(".overlay.show"))document.body.style.overflow=""}
+function overlayClose(event,id){if(event.target.id===id)closeModal(id)}
+function submitSubscription(event){
+ event.preventDefault();
+ const name=document.getElementById("clientName").value.trim(),phone=document.getElementById("clientPhone").value.trim(),section=document.getElementById("clientGender").value,payment=document.getElementById("clientPayment").value,notes=document.getElementById("clientNotes").value.trim();
+ if(!name||!phone||!section||!payment){alert(currentLang==="en"?"Please complete all required fields.":"من فضلك أكمل البيانات المطلوبة.");return}
+ const message=`New EXTREME GYM membership request\nName: ${name}\nMobile: ${phone}\nSection: ${section}\nPlan: ${selectedPlan.name}\nPrice: EGP ${selectedPlan.price}\nPayment method: ${payment}\nNotes: ${notes||"None"}\nPlease confirm membership details.`;
+ closeModal("subscribeOverlay");window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank");
+}
+function contactWhatsApp(message){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank")}
+async function copyInstapay(){
+ try{await navigator.clipboard.writeText(INSTAPAY_NUMBER);alert(currentLang==="en"?"Number copied.":"تم نسخ الرقم.")}
+ catch(e){const field=document.createElement("textarea");field.value=INSTAPAY_NUMBER;document.body.appendChild(field);field.select();const ok=document.execCommand("copy");field.remove();alert(ok?"Number copied.":"Please copy manually: "+INSTAPAY_NUMBER)}
+}
+function sendTransferScreenshot(){contactWhatsApp("Hello, I would like to send my EXTREME GYM InstaPay transfer screenshot. I will attach it in this WhatsApp chat.")}
+function toggleChat(){document.getElementById("chatWindow").classList.toggle("open")}
+function botReply(text){const body=document.getElementById("chatBody"),message=document.createElement("div");message.className="bot-message";message.textContent=text;body.appendChild(message);body.scrollTop=body.scrollHeight}
+function sendChatMessage(event){
+ event.preventDefault();const input=document.getElementById("chatInput"),text=input.value.trim();if(!text)return;
+ const body=document.getElementById("chatBody"),user=document.createElement("div");user.className="bot-message";user.style.border="1px solid #d5a52c55";user.textContent=(currentLang==="en"?"You: ":"أنت: ")+text;body.appendChild(user);input.value="";
+ const q=text.toLowerCase();let answer=currentLang==="en"?"For the most accurate information, contact EXTREME GYM management on WhatsApp.":"للحصول على تأكيد دقيق، تواصل مع إدارة الجيم على واتساب.";
+ if(/price|cost|membership|subscribe|بكام|سعر|اشتراك/.test(q))answer=currentLang==="en"?"Memberships: 1 month EGP 750, 3 months EGP 2,000, 6 months EGP 3,200, 12 months EGP 4,500.":"الأسعار: شهر 750 جنيه، 3 شهور 2000 جنيه، 6 شهور 3200 جنيه، سنة 4500 جنيه.";
+ else if(/hour|time|open|مواعيد|يفتح|الساعة/.test(q))answer=currentLang==="en"?"Men: Saturday–Thursday 8 AM–2 AM, Friday 10 AM–1 AM. Women: Saturday–Thursday 8 AM–10 PM, Friday closed. Separate sections.":"الرجال: السبت إلى الخميس 8 صباحًا–2 صباحًا، والجمعة 10 صباحًا–1 صباحًا. السيدات: السبت إلى الخميس 8 صباحًا–10 مساءً، والجمعة إجازة. كل قسم منفصل.";
+ else if(/offer|discount|عرض|عروض|خصم/.test(q))answer=currentLang==="en"?"Offers change. Contact management on WhatsApp for current offers.":"العروض بتتغير؛ تواصل مع الإدارة على واتساب لمعرفة العروض المتاحة حاليًا.";
+ else if(/address|where|location|عنوان|فين|مكان/.test(q))answer=currentLang==="en"?"101 Nasr Eldin Street, beside Nasr Eldin Mosque, First Haram, Giza.":"101 شارع نصر الدين، بجوار مسجد نصر الدين، أول الهرم، الجيزة.";
+ else if(/payment|instapay|transfer|دفع|تحويل|انستا/.test(q))answer=currentLang==="en"?"Please verify the InstaPay number and payment options with management before transferring money.":"من فضلك أكّد رقم InstaPay ووسائل الدفع مع الإدارة قبل التحويل.";
+ botReply(answer);body.scrollTop=body.scrollHeight;
+}
+document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
+if("IntersectionObserver" in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.08});
+ document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+}else{document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"))}
+</script>
+</body>
+</html>
